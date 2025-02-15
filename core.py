@@ -1,9 +1,11 @@
 import json
 import time
 import torch
+from flask import Flask
 import pyaudio
 import numpy as np
 import wave 
+from flask import Flask
 from transformers import WhisperProcessor, WhisperForConditionalGeneration, pipeline
 from datasets import load_dataset
 from huggingface_hub import InferenceClient
@@ -91,7 +93,8 @@ def map_to_pred(batch):
 
 def evaluation():
     # Create new testing dataset/references
-    user_input =  [real_time_transcription(press_record=True)]
+    # user_input =  [real_time_transcription(press_record=True)]
+    user_input = ['I have four pens']
     references = ['I have four pencils']
     
     wer = load("wer")
@@ -100,9 +103,10 @@ def evaluation():
     return score
 
 if __name__ == '__main__':
-    '''
-    [' Mr. Quilter is the apostle of the middle classes, and we are glad to welcome his gospel.']
-    '''
-    print(evaluation())
+    app = Flask(__name__)
+    @app.route('/output')
+    
+    def get_output():
+        return {"output": evaluation()}
     
 
