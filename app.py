@@ -1,8 +1,12 @@
 import streamlit as st
+from core import generate
 import sounddevice as sd
 import numpy as np
 import wave
 import core 
+
+text = generate()
+st.write(f"Say: {text}")
 
 def record_audio():
     st.write("🎙️ Speech Practise")
