@@ -1,4 +1,5 @@
 import { curve, heroBackground, robot } from "../assets";
+import illustration from "../assets/illustration.png";
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
@@ -22,10 +23,11 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+          <h1 className="h5 font-code mb-4">Your space adventure awaits!</h1>
           <h1 className="h1 mb-6">
-            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with{` `}
-            <span className="inline-block relative">
-              Brainwave{" "}
+            Discover New Words and Voices with{` `}
+            <span className="font-code inline-block relative font-extrabold">
+              TALKY{" "}
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -36,8 +38,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Unleash the power of AI within Brainwave. Upgrade your productivity
-            with Brainwave, the open AI chat app.
+            Speech therapy made fun. Launching little voices on a journey to the stars!
           </p>
           <Button href="/pricing" white>
             Get started
@@ -50,8 +51,9 @@ const Hero = () => {
 
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
-                  src={robot}
-                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:translate-y-[10%] lg:-translate-y-[23%]"
+                  src={illustration}
+                  className="w-full scale-[1.7] translate-y-[20%] md:scale-[1] md:translate-y-[25%] lg:scale-[1] lg:translate-y-[-10%]"
+
                   width={1024}
                   height={490}
                   alt="AI"
@@ -72,7 +74,7 @@ const Hero = () => {
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification 
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Code generation"
+                    title="Personalized Coach"
                   />
                 </ScrollParallax>
               </div>
