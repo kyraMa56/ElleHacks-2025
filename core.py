@@ -36,14 +36,14 @@ def generate():
     print(call(w))
 
 def call(w):
-    basedir = os.path.dirname(os.path.abspath(__file__))
-    folder_path = os.path.join(basedir,'config.json')
-    with open((folder_path), "rb") as config_file:
-        config = json.load(config_file)
-    api_key = config["api_key"]
-    print(api_key)
+    # basedir = os.path.dirname(os.path.abspath(__file__))
+    # folder_path = os.path.join(basedir,'config.json')
+    # with open((folder_path), "rb") as config_file:
+    #     config = json.load(config_file)
+    # api_key = config["api_key"]
+    # print(api_key)
     client = Groq(
-        api_key = api_key,
+        api_key = "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",
     )
     chat_completion = client.chat.completions.create(
         messages=[
