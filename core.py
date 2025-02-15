@@ -1,11 +1,9 @@
 import json
 import time
 import torch
-from flask import Flask
 import pyaudio
 import numpy as np
 import wave 
-from flask import Flask
 from transformers import WhisperProcessor, WhisperForConditionalGeneration, pipeline
 from datasets import load_dataset
 from huggingface_hub import InferenceClient
@@ -103,10 +101,6 @@ def evaluation():
     return score
 
 if __name__ == '__main__':
-    app = Flask(__name__)
-    @app.route('/output')
-    
-    def get_output():
-        return {"output": evaluation()}
+    print('score: ',evaluation())
     
 
