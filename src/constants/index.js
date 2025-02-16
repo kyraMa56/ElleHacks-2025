@@ -119,8 +119,8 @@ export const roadmap = [
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
+    title: "Customized Learning",
+    text: "Talky adapts to the user's strengths and weaknesses, making it more engaging and effective to learn.",
     date: "May 2023",
     status: "done",
     imageUrl: roadmap3,
@@ -136,21 +136,21 @@ export const roadmap = [
 ];
 
 export const collabText =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+  "With Talky, you no longer need to spend hours finding a speech therapist. Simply log on to the app.";
 
 export const collabContent = [
   {
     id: "0",
-    title: "Seamless Integration",
+    title: "Easy Learning",
     text: collabText,
   },
   {
     id: "1",
-    title: "Smart Automation",
+    title: "Smart Adaptation",
   },
   {
     id: "2",
-    title: "Top-notch Security",
+    title: "Fun challenges",
   },
 ];
 
@@ -252,8 +252,8 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Personalized learning",
+    text: "No two children are the same. Talky adapts to the user's strengths and weaknesses, making it more engaging and effective to learn.",
     backgroundUrl: benefitCard1,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -261,7 +261,7 @@ export const benefits = [
   {
     id: "1",
     title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    text: "Studies have shown that early intervention is the best way to treat speech disorders. Being able to practice every day early in childhood is key to improvement.",
     backgroundUrl: benefitCard2,
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -269,8 +269,8 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Engaging experience",
+    text: "Let's be honest. Children get bored during long lessons. The engaging gamified experience of Talky helps them feel more confident and interested.",
     backgroundUrl: benefitCard3,
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
@@ -278,7 +278,7 @@ export const benefits = [
   {
     id: "3",
     title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    text: "Users can quickly get feedback on their pronunciation anytime, helping them improve faster.",
     backgroundUrl: benefitCard4,
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -286,16 +286,16 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Lack of judgement",
+    text: "Children with speech impediments often feel isolated in social converations. The Talky app creates a judgement-free environment for them to practice and improve.",
     backgroundUrl: benefitCard5,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "No cost",
+    text: "Only around 20% of children with speech disorders receive the help they need. The Talky app is free to use, making it accessible to everyone.",
     backgroundUrl: benefitCard6,
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
