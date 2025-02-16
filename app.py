@@ -5,11 +5,13 @@ import numpy as np
 import wave
 import core 
 
+st.title("🎤 Can you get 5 stars on this level?")
+
 text = generate()
-st.write(f"Say: {text}")
+st.subheader(f"Say: {text}")
 
 def record_audio():
-    st.write("🎙️ Speech Practise")
+    st.write("🎙️ Let's Practice!")
 
     SAMPLE_RATE = 16000 
     CHANNELS = 1
@@ -29,8 +31,6 @@ def record_audio():
     st.success("✅ Recording saved!")
     return file_path
 
-st.title("🎤 Real-Time Speech-to-Text with Whisper")
-
 if st.button("Start Recording"):
     audio_file = record_audio()
     st.audio(audio_file, format="audio/wav")
@@ -39,6 +39,18 @@ if st.button("Start Recording"):
     st.subheader("📝 Transcription:")
     st.write(transcription)
 
-    wer_score = core.evaluation(transcription)
-    st.subheader("📊 WER Score:")
-    st.write(f"{wer_score:.2f}%")
+    wer_score = core.evaluation(transcription, text)
+    st.subheader("📊 Your Score:")
+    # st.write(f"{wer_score:.2f}%")
+    
+    star = "⭐"
+    if(wer_score > 80):
+        st.write(f"Great Job! {star, star, star, star, star}")
+    elif(wer_score > 60):
+        st.write(f"Nice Job! {star, star, star, star}")
+    elif(wer_score > 40):
+        st.write(f"Nice Job! {star, star, star}")
+    elif(wer_score > 20):
+        st.write(f"Nice Job! {star, star}")
+    else:
+        st.write(f"Nice Job! {star}")
