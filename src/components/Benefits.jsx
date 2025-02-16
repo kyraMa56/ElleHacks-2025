@@ -13,7 +13,7 @@ const Benefits = () => {
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
-          title="Learn smarter, not harder with Talky"
+          title="Learn Smarter, Not Harder with Talky"
         />
 
         <div className="flex flex-wrap gap-10 mb-10">

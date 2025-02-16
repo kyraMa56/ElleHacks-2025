@@ -1,5 +1,6 @@
 import { curve, heroBackground, robot } from "../assets";
 import illustration from "../assets/illustration.png";
+import homescreen from "../assets/homescreen.png";
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
@@ -51,7 +52,7 @@ const Hero = () => {
 
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
-                  src={illustration}
+                  src={homescreen}
                   className="w-full scale-[1.7] translate-y-[20%] md:scale-[1] md:translate-y-[25%] lg:scale-[1] lg:translate-y-[-10%]"
 
                   width={1024}
