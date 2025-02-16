@@ -43,14 +43,13 @@ if st.button("Start Recording"):
     st.subheader("📊 Your Score:")
     # st.write(f"{wer_score:.2f}%")
     
-    star = "⭐"
     if(wer_score > 80):
-        st.write(f"Great Job! {star, star, star, star, star}")
+        st.write(f"Great Job! ⭐⭐⭐⭐⭐")
     elif(wer_score > 60):
-        st.write(f"Nice Job! {star, star, star, star}")
+        st.write(f"Nice Job! ⭐⭐⭐⭐")
     elif(wer_score > 40):
-        st.write(f"Nice Job! {star, star, star}")
+        st.write(f"Nice Job! ⭐⭐⭐")
     elif(wer_score > 20):
-        st.write(f"Nice Job! {star, star}")
+        st.write(f"Nice Job! ⭐⭐")
     else:
-        st.write(f"Nice Job! {star}")
+        st.write(f"Nice Job! ⭐")
