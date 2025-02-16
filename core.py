@@ -7,6 +7,8 @@ from datasets import load_dataset
 from huggingface_hub import InferenceClient
 from evaluate import load
 from transformers import AutoProcessor, AutoModelForSpeechSeq2Seq
+import random
+from groq import Groq
 
 os.environ["PATH"] += os.pathsep + "C:/ffmpeg/bin" 
 
@@ -26,14 +28,13 @@ def choose_word():
         data = json.load(file)
 
     data["words"].sort(key=lambda x: x["score"])
-    print(data["words"])
     return [word["word"] for word in data["words"]]
 
 def generate():
     words = choose_word()
     ran = random.randint(0, 9)
     w = words[ran]
-    print(call(w))
+    return call(w)
 
 def call(w):
     # basedir = os.path.dirname(os.path.abspath(__file__))
@@ -64,7 +65,7 @@ def call(w):
     )
 
     # Print the completion returned by the LLM.
-    print(chat_completion.choices[0].message.content)
+    return chat_completion.choices[0].message.content
 
 def transcription_func(audio_data):
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -86,14 +87,14 @@ def map_to_pred(batch):
     batch["prediction"] = processor.tokenizer._normalize(transcription)
     return batch
 
-def evaluation(transcription):
+def evaluation(transcription, ref):
     # Create new testing dataset/references
     # user_input =  [real_time_transcription(press_record=True)]
     user_input = [transcription]
-    references = ['I have four pencils']
+    references = [ref]
     
     wer = load("wer")
-    score = 100 * wer.compute(references=references, predictions=user_input)
+    score = 100 * (1-wer.compute(references=references, predictions=user_input))
     
     return score
 
